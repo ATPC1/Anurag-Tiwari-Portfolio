@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ======================================
+   CSS CUSTOM PROPERTIES & GLOBAL STYLES
+   ====================================== */
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+  --bg-dark: #0f0f1a;
+  --card-dark: #1a1a2e;
+  --text-light: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode body */
+.dark body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* ======================================
+   SCROLLBAR STYLING
+   ====================================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4f46e5, #7c3aed);
+}
+
+/* ======================================
+   GLASSMORPHISM UTILITIES
+   ====================================== */
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .glass-light {
+    @apply bg-white/80 backdrop-blur-md border border-gray-200/50 rounded-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white
+           bg-gradient-to-r from-primary-500 to-violet-500
+           hover:from-primary-600 hover:to-violet-600
+           transition-all duration-300 hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-primary-400;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold
+           border border-primary-500/50 text-primary-400
+           hover:bg-primary-500/10 hover:border-primary-400
+           transition-all duration-300 hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-primary-400;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-heading gradient-text mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-gray-400 text-center max-w-xl mx-auto;
+  }
+
+  .card {
+    @apply glass p-6 transition-all duration-300 hover:-translate-y-1;
+  }
+  .card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
+  }
+
+  .card-light {
+    @apply glass-light p-6 transition-all duration-300 hover:-translate-y-1;
+  }
+  .card-light:hover {
+    border-color: rgba(147, 197, 253, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* ======================================
+   PARTICLE CANVAS
+   ====================================== */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ======================================
+   SKILL PROGRESS BARS
+   ====================================== */
+.skill-bar-fill {
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+}
+
+/* ======================================
+   FLOATING ANIMATION
+   ====================================== */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ======================================
+   GLOW RING
+   ====================================== */
+.glow-ring {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3), 0 0 30px rgba(99, 102, 241, 0.2);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(99,102,241,0.3), 0 0 30px rgba(99,102,241,0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(139,92,246,0.4), 0 0 60px rgba(139,92,246,0.3); }
+}
+
+/* ======================================
+   GRADIENT BORDER CARD
+   ====================================== */
+.gradient-border {
+  position: relative;
+  background: var(--card-dark);
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ======================================
+   LIGHT MODE OVERRIDES
+   ====================================== */
+.light-mode-bg {
+  background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 50%, #faf8ff 100%);
+}
+
+/* ======================================
+   HERO SECTION GRADIENT ORB
+   ====================================== */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* ======================================
+   SECTION DIVIDER
+   ====================================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* ======================================
+   SOCIAL LINK CARD HOVER
+   ====================================== */
+.social-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* ======================================
+   TYPING CURSOR
+   ====================================== */
+.type-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background: #6366f1;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
