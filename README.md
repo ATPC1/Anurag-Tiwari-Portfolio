@@ -1,16 +1,63 @@
-# React + Vite
+# Anurag Tiwari — Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and high-performance personal portfolio landing page built with **React**, **Tailwind CSS**, and **Framer Motion**.
 
-Currently, two official plugins are available:
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
+![React](https://img.shields.io/badge/React-18-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-3.0-cyan)
+![Framer Motion](https://img.shields.io/badge/Animations-Framer_Motion-blueviolet)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🌓 **Dark/Light Mode**: Full support with system preference detection.
+- 📱 **Fully Responsive**: Optimized for all devices (Mobile, Tablet, Desktop).
+- 🎨 **Glassmorphism UI**: Modern aesthetic with custom design tokens.
+- ⚡ **Performance**: Optimized images and code for near-perfect Lighthouse scores.
+- ✍️ **Typewriter Effect**: Dynamic introduction in the hero section.
+- 📂 **Project Showcase**: Filterable project gallery with live demo and source links.
+- 🔗 **Social Hub**: Centralized links to all professional and social platforms.
+- 📩 **Contact Form**: Integrated EmailJS support for direct messages.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React.js, Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React, React Icons
+- **Logic**: .NET Framework (WinForms/WebForms context), MERN Stack concepts
+- **Deployment**: Vercel / Netlify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🌐 Deployment
+
+This project is ready to be deployed on **Vercel** or **Netlify**.
+
+1. Connect your GitHub repository.
+2. Select the repository.
+3. Click **Deploy**.
+
+## 📄 License
+
+Distributed under the MIT License.
+
+---
+
+**Built by [Anurag Tiwari](https://github.com/ATPC1)**
