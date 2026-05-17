@@ -3,13 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { Download, Mail, ExternalLink, ArrowDown } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { socialLinks } from '../data/socialLinks';
-
-// ============================================================
-// HERO SECTION
-// TODO: Replace avatarInitials with your photo:
-//   import profilePhoto from '../assets/profile.jpg';
-//   Then use <img src={profilePhoto} .../> instead of the initials div
-// ============================================================
+import profilePhoto from '../assets/profile.jpg';
 
 export default function Hero() {
   const { isDark } = useTheme();
@@ -244,12 +238,11 @@ export default function Hero() {
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-full glow-ring overflow-hidden
                               bg-gradient-to-br from-primary-500 to-violet-500 flex items-center justify-center
                               text-white text-7xl md:text-8xl font-bold font-heading select-none">
-                {/* ============================================================ */}
-                {/* TODO: Replace this div with your actual photo:               */}
-                {/* <img src={profilePhoto} alt="Anurag Tiwari"                  */}
-                {/*      className="w-full h-full object-cover" />               */}
-                {/* ============================================================ */}
-                AT
+                <img
+                  src={profilePhoto}
+                  alt="Anurag Tiwari"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
 
               {/* Floating badges */}
