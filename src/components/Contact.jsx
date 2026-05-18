@@ -103,8 +103,9 @@ export default function Contact() {
       });
       setSubmitted(true);
       setForm({ name: '', email: '', subject: '', message: '' });
-    } catch {
-      toast.error('Oops! Something went wrong. Please try again.');
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast.error(error?.text || 'Oops! Something went wrong. Please try again.');
     } finally {
       setIsLoading(false);
     }
