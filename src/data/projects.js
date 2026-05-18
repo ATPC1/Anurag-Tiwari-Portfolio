@@ -1,6 +1,6 @@
 // ============================================================
 // PROJECTS DATA
-// Contains the 5 Java, Spring Boot, & React projects from your CV
+// Contains all 8 projects (5 Java/Spring Boot & 3 previous ones)
 // ============================================================
 
 export const projects = [
@@ -64,6 +64,42 @@ export const projects = [
     featured: true,
     category: 'backend',
   },
+  {
+    id: 6,
+    title: 'HyperCart — Multi-Vendor E-Commerce',
+    description:
+      'A full-featured multi-vendor e-commerce platform with real-time inventory, Razorpay payment integration, vendor dashboards, admin panel, and order tracking.',
+    image: null,
+    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Razorpay', 'Socket.IO', 'JWT'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
+    featured: true,
+    category: 'fullstack',
+  },
+  {
+    id: 7,
+    title: 'ASPGYM Project',
+    description:
+      'A gym management system with member registration, attendance tracking, subscription management, and admin controls.',
+    image: null,
+    tech: ['React', 'Node.js', 'MySQL', 'Express', 'JWT'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
+    featured: false,
+    category: 'fullstack',
+  },
+  {
+    id: 8,
+    title: 'Personal Portfolio Website',
+    description:
+      'A modern, animated portfolio website built with React, Tailwind CSS, and Framer Motion. Features dark/light mode, particle animations, and smooth scroll.',
+    image: null,
+    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
+    featured: true,
+    category: 'frontend',
+  },
 ];
 
-export const categories = ['all', 'fullstack', 'backend'];
+export const categories = ['all', 'fullstack', 'frontend', 'backend'];
