@@ -106,7 +106,7 @@ export default function Contact() {
       });
       setSubmitted(true);
       setForm({ name: '', email: '', subject: '', message: '' });
-    } catch (err) {
+    } catch {
       toast.error('Oops! Something went wrong. Please try again.');
     } finally {
       setIsLoading(false);

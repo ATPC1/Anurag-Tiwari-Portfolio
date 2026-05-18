@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, FolderOpen, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
@@ -18,11 +18,6 @@ export default function Projects() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  // Reset active index when category changes
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [filter]);
 
   const handlePrev = () => {
     setActiveIndex((prev) => Math.max(0, prev - 1));
@@ -81,7 +76,10 @@ export default function Projects() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
+              onClick={() => {
+                setFilter(cat);
+                setActiveIndex(0);
+              }}
               className={`px-4 py-1.5 rounded-lg text-sm font-medium capitalize transition-all duration-200 ${
                 filter === cat
                   ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/30'
