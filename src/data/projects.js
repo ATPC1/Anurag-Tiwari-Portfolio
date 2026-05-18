@@ -1,48 +1,69 @@
 // ============================================================
 // PROJECTS DATA
-// Replace project images, links, and descriptions with your own
+// Contains the 5 Java, Spring Boot, & React projects from your CV
 // ============================================================
 
 export const projects = [
   {
     id: 1,
-    title: 'HyperCart — Multi-Vendor E-Commerce',
+    title: 'AI-Powered Content Generator',
     description:
-      'A full-featured multi-vendor e-commerce platform with real-time inventory, Razorpay payment integration, vendor dashboards, admin panel, and order tracking.',
-    image: null, // Replace with project screenshot URL or import
-    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Razorpay', 'Socket.IO', 'JWT'],
-    github: 'https://github.com/ATPC1', // TODO: Add specific repo link
-    demo: '#',  // TODO: Add live demo link
+      'Developed a full-stack AI content generation application allowing users to create structured content from text prompts. Designed backend APIs capable of handling prompt inputs and generating formatted output.',
+    image: null,
+    tech: ['React', 'Spring Boot', 'Java', 'REST APIs', 'AI Integration'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
     featured: true,
     category: 'fullstack',
   },
   {
     id: 2,
-    title: 'ASPGYM Project',
+    title: 'Real-Time Customer Support Chat',
     description:
-      'A gym management system with member registration, attendance tracking, subscription management, and admin controls.',
+      'Built a functional live chat system with instant messaging capabilities. Integrated WebSocket communication to allow real-time updates without page refresh.',
     image: null,
-    tech: ['React', 'Node.js', 'MySQL', 'Express', 'JWT'],
+    tech: ['React', 'Spring Boot', 'Java', 'WebSockets', 'STOMP Protocol'],
     github: 'https://github.com/ATPC1',
     demo: '#',
-    featured: false,
+    featured: true,
     category: 'fullstack',
   },
   {
     id: 3,
-    title: 'Personal Portfolio Website',
+    title: 'Secure Digital Asset Marketplace',
     description:
-      'A modern, animated portfolio website built with React, Tailwind CSS, and Framer Motion. Features dark/light mode, particle animations, and smooth scroll.',
+      'Developed a secure backend for product listing, ordering, and role-based data access. Implemented user authentication using Spring Security with Basic Authentication. Ensured data consistency through proper mapping using Hibernate.',
     image: null,
-    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    tech: ['Spring Boot', 'Spring Security', 'Java', 'Hibernate', 'MySQL'],
     github: 'https://github.com/ATPC1',
     demo: '#',
     featured: true,
-    category: 'frontend',
+    category: 'backend',
   },
-  // ============================================================
-  // TODO: Add more projects here following the same structure
-  // ============================================================
+  {
+    id: 4,
+    title: 'Medical Appointment Booking System',
+    description:
+      'Created a backend booking system allowing patients to schedule appointments with doctors. Implemented custom conflict-check logic to prevent double booking of time slots.',
+    image: null,
+    tech: ['Spring Boot', 'Java', 'MySQL', 'Hibernate', 'REST APIs'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
+    featured: false,
+    category: 'backend',
+  },
+  {
+    id: 5,
+    title: 'Personal Finance Dashboard',
+    description:
+      'Developed a CRUD-based personal finance tracking dashboard for daily expenses and incomes. Created clean REST APIs for transaction management and category-based sorting.',
+    image: null,
+    tech: ['Spring Boot', 'Java', 'MySQL', 'Hibernate', 'REST APIs'],
+    github: 'https://github.com/ATPC1/finance-dashboard-backend',
+    demo: '#',
+    featured: true,
+    category: 'backend',
+  },
 ];
 
-export const categories = ['all', 'fullstack', 'frontend', 'backend'];
+export const categories = ['all', 'fullstack', 'backend'];
