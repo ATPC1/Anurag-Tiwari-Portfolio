@@ -10,10 +10,10 @@ import { useTheme } from '../context/ThemeContext';
 // 2. Create an Email Service, Email Template, and get Public Key
 // 3. Replace the values below:
 // ============================================================
-// import emailjs from '@emailjs/browser';
-// const SERVICE_ID = 'your_service_id';
-// const TEMPLATE_ID = 'your_template_id';
-// const PUBLIC_KEY = 'your_public_key';
+import emailjs from '@emailjs/browser';
+const SERVICE_ID = 'service_qvlc70r';
+const TEMPLATE_ID = 'template_m89jbld';
+const PUBLIC_KEY = 'MX7qd9Xhaz5CyMyko';
 
 const contactInfo = [
   {
@@ -39,7 +39,7 @@ const contactInfo = [
   },
 ];
 
-function InputField({ label, id, type = 'text', placeholder, value, onChange, required }) {
+function InputField({ label, id, name, type = 'text', placeholder, value, onChange, required }) {
   const { isDark } = useTheme();
   return (
     <div>
@@ -48,6 +48,7 @@ function InputField({ label, id, type = 'text', placeholder, value, onChange, re
       </label>
       <input
         id={id}
+        name={name}
         type={type}
         placeholder={placeholder}
         value={value}
@@ -87,13 +88,9 @@ export default function Contact() {
 
     try {
       // ============================================================
-      // TODO: Uncomment and configure EmailJS to enable email sending:
-      //
-      // await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
-      //
-      // For now, simulating a successful send:
+      // EmailJS sending:
       // ============================================================
-      await new Promise((res) => setTimeout(res, 1500));
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
 
       toast.success('Message sent! I\'ll get back to you soon. 🚀', {
         duration: 5000,
@@ -224,10 +221,15 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className={`card ${isDark ? '' : 'card-light'} space-y-5`}
             >
+              {/* Hidden inputs to make sure either 'reply_to' or 'from_email' works depending on template setup */}
+              <input type="hidden" name="reply_to" value={form.email} />
+              <input type="hidden" name="from_email" value={form.email} />
+
               <div className="grid sm:grid-cols-2 gap-5">
                 <InputField
                   label="Your Name"
                   id="contact-name"
+                  name="from_name"
                   placeholder="John Doe"
                   value={form.name}
                   onChange={handleChange('name')}
@@ -236,6 +238,7 @@ export default function Contact() {
                 <InputField
                   label="Email Address"
                   id="contact-email"
+                  name="from_email"
                   type="email"
                   placeholder="john@example.com"
                   value={form.email}
@@ -247,6 +250,7 @@ export default function Contact() {
               <InputField
                 label="Subject"
                 id="contact-subject"
+                name="subject"
                 placeholder="Project Collaboration, Hiring, Just Saying Hi..."
                 value={form.subject}
                 onChange={handleChange('subject')}
@@ -258,6 +262,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="contact-message"
+                  name="message"
                   rows={5}
                   placeholder="Tell me about your project, opportunity, or just say hello! 👋"
                   value={form.message}
