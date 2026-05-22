@@ -224,7 +224,6 @@ export default function Contact() {
             >
               {/* Hidden inputs to make sure either 'reply_to' or 'from_email' works depending on template setup */}
               <input type="hidden" name="reply_to" value={form.email} />
-              <input type="hidden" name="from_email" value={form.email} />
 
               <div className="grid sm:grid-cols-2 gap-5">
                 <InputField
