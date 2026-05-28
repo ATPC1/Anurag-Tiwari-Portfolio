@@ -66,11 +66,11 @@ export const projects = [
   },
   {
     id: 6,
-    title: 'HyperCart — Multi-Vendor E-Commerce',
+    title: 'HyperCart: Multi-Vendor E-Commerce Platform',
     description:
-      'A full-featured multi-vendor e-commerce platform with real-time inventory, Razorpay payment integration, vendor dashboards, admin panel, and order tracking.',
+      'A scalable marketplace designed for complex multi-user interactions and real-time data synchronization. Features Role-Based Access (RBAC) dashboards for Admins, Vendors, and Buyers, Socket.IO stock updates, and a production-ready Razorpay checkout flow. Combines complex Redux state with persistent bi-directional communication.',
     image: null,
-    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Razorpay', 'Socket.IO', 'JWT'],
+    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'Redux Toolkit', 'Tailwind CSS', 'Socket.IO', 'Razorpay API', 'Nodemailer'],
     github: 'https://github.com/ATPC1',
     demo: '#',
     featured: true,
@@ -99,6 +99,30 @@ export const projects = [
     demo: '#',
     featured: true,
     category: 'frontend',
+  },
+  {
+    id: 9,
+    title: 'NexusTalk AI: Real-Time Communication Platform',
+    description:
+      'A high-performance real-time chat application featuring a built-in group bot powered by Gemini AI, peer-to-peer WebRTC video calling, and optimized Cloudinary CDN media management. Containerized with Docker and powered by a strictly typed Java Spring Boot backend paired with real-time STOMP WebSocket messaging.',
+    image: null,
+    tech: ['React', 'Java', 'Spring Boot 3', 'PostgreSQL', 'Zustand', 'WebSockets', 'Gemini AI', 'Cloudinary', 'Docker', 'WebRTC'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
+    featured: true,
+    category: 'fullstack',
+  },
+  {
+    id: 10,
+    title: 'NeoLearn: EdTech Platform',
+    description:
+      'A premium glassmorphic educational platform focusing heavily on rich front-end aesthetics, Framer Motion micro-animations, and dynamic dashboards for students (CoursePlayer), instructors, and admins. Features an intelligent multi-step preferences onboarding wizard.',
+    image: null,
+    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Vite', 'Zustand', 'Tailwind CSS', 'Framer Motion', 'Helmet.js'],
+    github: 'https://github.com/ATPC1',
+    demo: '#',
+    featured: true,
+    category: 'fullstack',
   },
 ];
 
