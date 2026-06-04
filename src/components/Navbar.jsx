@@ -134,10 +134,11 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            key="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`md:hidden border-t ${
+            className={`md:hidden overflow-hidden border-t ${
               isDark ? 'bg-dark-800/95 border-white/5' : 'bg-white/95 border-gray-200/50'
             } backdrop-blur-xl`}
           >
@@ -147,7 +148,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
+                  className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
                     isDark
                       ? 'text-gray-300 hover:text-white hover:bg-white/5'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
@@ -162,7 +163,7 @@ export default function Navbar() {
               <motion.a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                className="btn-primary text-sm text-center mt-2"
+                className="block w-full btn-primary text-sm text-center mt-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
