@@ -39,7 +39,11 @@ export default function Navbar() {
 
   const handleNavClick = (href) => {
     setIsOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    // Delay scroll slightly to allow the menu close animation to process
+    // This prevents mobile browsers from cancelling the smooth scroll
+    setTimeout(() => {
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    }, 150);
   };
 
   return (
