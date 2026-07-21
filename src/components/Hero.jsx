@@ -237,7 +237,7 @@ export default function Hero() {
             <div className="animate-float relative">
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-full glow-ring overflow-hidden
                               bg-gradient-to-br from-primary-500 to-violet-500 flex items-center justify-center
-                              text-white text-7xl md:text-8xl font-bold font-heading select-none">
+                              text-white text-7xl md:text-8xl font-bold font-heading select-none shadow-[0_0_50px_rgba(99,102,241,0.5)]">
                 <img
                   src={profilePhoto}
                   alt="Anurag Tiwari"
