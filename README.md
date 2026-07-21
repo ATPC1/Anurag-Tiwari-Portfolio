@@ -23,7 +23,7 @@ A modern, responsive, and high-performance personal portfolio landing page built
 - **Frontend**: React.js, Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React, React Icons
-- **Logic**: .NET Framework (WinForms/WebForms context), MERN Stack concepts
+- **Logic**: Data Science, Python, Java, Spring Framework
 - **Deployment**: Vercel / Netlify
 
 ## 🚀 Getting Started

@@ -92,7 +92,7 @@ export default function Hero() {
               <TypeAnimation
                 sequence={[
                   'Full Stack Developer', 2000,
-                  'MERN Stack Engineer', 2000,
+                  'Data Science & Python Developer', 2000,
                   'Software Developer', 2000,
                   'B.Sc. IT Student', 2000,
                   'Problem Solver', 2000,
@@ -113,8 +113,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              A passionate Full Stack Developer who loves building scalable web applications and
-              elegant user experiences. I specialize in the MERN stack and enjoy turning complex
+              A passionate Developer who loves building scalable applications and
+              extracting insights from data. I specialize in Data Science, Python, and Java and enjoy turning complex
               problems into simple, beautiful solutions.
             </motion.p>
 
@@ -265,7 +265,7 @@ export default function Hero() {
             </div>
 
             {/* Tech pill icons around avatar */}
-            {['React', 'Node', 'Mongo', 'JS'].map((tech, i) => {
+            {['Python', 'Java', 'Spring', 'Data'].map((tech, i) => {
               const positions = [
                 { top: '10%', right: '-15%' },
                 { bottom: '20%', right: '-18%' },

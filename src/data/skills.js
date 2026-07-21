@@ -23,23 +23,23 @@ export const skillCategories = [
     icon: '⚙️',
     color: 'from-violet-500 to-purple-500',
     skills: [
-      { name: 'Node.js', level: 80 },
-      { name: '.NET Framework', level: 75 },
-      { name: 'Express.js', level: 80 },
+      { name: 'Python', level: 85 },
+      { name: 'Java', level: 85 },
+      { name: 'Spring Boot', level: 80 },
+      { name: 'Node.js', level: 75 },
       { name: 'REST APIs', level: 85 },
-      { name: 'JWT Auth', level: 75 },
     ],
   },
   {
-    id: 'desktop_web',
-    title: '.NET & Desktop',
-    icon: '💻',
+    id: 'data_science',
+    title: 'Data Science',
+    icon: '📊',
     color: 'from-indigo-500 to-blue-500',
     skills: [
-      { name: 'ASP.NET WebForms', level: 80 },
-      { name: 'Windows Forms (WinForms)', level: 85 },
-      { name: 'C# / .NET', level: 80 },
-      { name: 'Socket.IO', level: 65 },
+      { name: 'Machine Learning', level: 80 },
+      { name: 'Pandas / NumPy', level: 85 },
+      { name: 'Data Analysis', level: 80 },
+      { name: 'Jupyter', level: 85 },
     ],
   },
   {
@@ -70,7 +70,7 @@ export const skillCategories = [
 
 // Other tech badges (shown as pills in About section)
 export const techStack = [
-  'React', 'Node.js', '.NET Framework', 'WebForms', 'WinForms', 'C#', 
-  'MongoDB', 'MySQL', 'SQL Server', 'JavaScript', 'HTML', 'CSS', 
-  'Tailwind', 'Redux', 'JWT', 'REST API', 'Git', 'GitHub',
+  'Python', 'Java', 'Spring Boot', 'Machine Learning', 'Pandas', 'NumPy', 
+  'React', 'Node.js', 'MongoDB', 'MySQL', 'JavaScript', 'HTML', 'CSS', 
+  'Tailwind', 'Redux', 'REST API', 'Git', 'GitHub',
 ];

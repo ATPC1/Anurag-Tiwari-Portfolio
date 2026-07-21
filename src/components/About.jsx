@@ -62,12 +62,12 @@ export default function About() {
             <div className={`space-y-4 text-base leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               <p>
                 Hey! I'm <span className="gradient-text font-semibold">Anurag Tiwari</span>, a passionate
-                Full Stack Developer and B.Sc. IT student who loves crafting digital experiences that matter.
+                Developer and B.Sc. IT student who loves crafting data-driven solutions and applications.
               </p>
               <p>
                 My journey into tech started with curiosity about how websites work, and it quickly turned
-                into a passion for building them. I specialize in the <span className="text-primary-400 font-medium">MERN stack</span> (MongoDB, Express.js, React, Node.js)
-                and have extensive experience with the <span className="text-primary-400 font-medium">.NET Framework</span>, specifically in building robust applications using **WebForms** and **Windows Forms (WinForms)**.
+                into a passion for building them. I specialize in <span className="text-primary-400 font-medium">Data Science, Python, and Java</span>
+                and have extensive experience with the <span className="text-primary-400 font-medium">Spring Framework</span>, specifically in building robust scalable applications.
               </p>
               <p>
                 When I'm not coding, you'll find me solving problems on HackerRank, contributing to
@@ -85,7 +85,7 @@ export default function About() {
                 { icon: GraduationCap, label: 'Education', value: 'B.Sc. IT — Mumbai University', color: 'text-cyan-400' },
                 { icon: MapPin, label: 'Location', value: 'India 🇮🇳', color: 'text-pink-400' },
                 { icon: Calendar, label: 'Experience', value: '2+ Years of Coding', color: 'text-amber-400' },
-                { icon: Code2, label: 'Specialization', value: 'MERN Stack Development', color: 'text-violet-400' },
+                { icon: Code2, label: 'Specialization', value: 'Data Science & Java/Python Dev', color: 'text-violet-400' },
               ].map(({ icon: Icon, label, value, color }) => (
                 <motion.div
                   key={label}
