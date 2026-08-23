@@ -94,7 +94,7 @@ export default function Hero() {
                   'Full Stack Developer', 2000,
                   'Data Science & Python Developer', 2000,
                   'Software Developer', 2000,
-                  'B.Sc. IT Student', 2000,
+                  'MCA Student', 2000,
                   'Problem Solver', 2000,
                 ]}
                 wrapper="span"

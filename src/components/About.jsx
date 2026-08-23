@@ -62,7 +62,7 @@ export default function About() {
             <div className={`space-y-4 text-base leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               <p>
                 Hey! I'm <span className="gradient-text font-semibold">Anurag Tiwari</span>, a passionate
-                Developer and B.Sc. IT student who loves crafting data-driven solutions and applications.
+                Developer and MCA student who loves crafting data-driven solutions and applications.
               </p>
               <p>
                 My journey into tech started with curiosity about how websites work, and it quickly turned
@@ -75,14 +75,14 @@ export default function About() {
                 maintainable code and building products that create real value.
               </p>
               <p>
-                I'm currently pursuing my degree from the <span className="text-primary-400 font-medium">University of Mumbai</span> and looking for opportunities where I can contribute and grow.
+                I'm currently pursuing my degree from the <span className="text-primary-400 font-medium">Chandigarh University</span> and looking for opportunities where I can contribute and grow.
               </p>
             </div>
 
             {/* Info Cards */}
             <div className="grid sm:grid-cols-2 gap-4 mt-8">
               {[
-                { icon: GraduationCap, label: 'Education', value: 'B.Sc. IT — Mumbai University', color: 'text-cyan-400' },
+                { icon: GraduationCap, label: 'Education', value: 'MCA — Chandigarh University', color: 'text-cyan-400' },
                 { icon: MapPin, label: 'Location', value: 'India 🇮🇳', color: 'text-pink-400' },
                 { icon: Calendar, label: 'Experience', value: '2+ Years of Coding', color: 'text-amber-400' },
                 { icon: Code2, label: 'Specialization', value: 'Data Science & Java/Python Dev', color: 'text-violet-400' },

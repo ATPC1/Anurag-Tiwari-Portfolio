@@ -6,11 +6,11 @@
    CSS CUSTOM PROPERTIES & GLOBAL STYLES
    ====================================== */
 :root {
-  --primary: #6366f1;
-  --secondary: #8b5cf6;
-  --accent: #06b6d4;
-  --bg-dark: #0f0f1a;
-  --card-dark: #1a1a2e;
+  --primary: #f59e0b;
+  --secondary: #f97316;
+  --accent: #78716c;
+  --bg-dark: #271c19;
+  --card-dark: #3a2a26;
   --text-light: #e2e8f0;
 }
 
@@ -44,16 +44,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0f1a;
+  background: #271c19;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  background: linear-gradient(180deg, #f59e0b, #f97316);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #4f46e5, #7c3aed);
+  background: linear-gradient(180deg, #d97706, #ea580c);
 }
 
 /* ======================================
@@ -88,7 +88,7 @@ body {
            focus:outline-none focus:ring-2 focus:ring-primary-400;
   }
   .btn-primary:hover {
-    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
   }
 
   .btn-outline {
@@ -111,8 +111,8 @@ body {
     @apply glass p-6 transition-all duration-300 hover:-translate-y-1;
   }
   .card:hover {
-    border-color: rgba(99, 102, 241, 0.3);
-    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
+    border-color: rgba(245, 158, 11, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(245, 158, 11, 0.1), 0 10px 10px -5px rgba(245, 158, 11, 0.04);
   }
 
   .card-light {
@@ -164,13 +164,13 @@ body {
    GLOW RING
    ====================================== */
 .glow-ring {
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3), 0 0 30px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3), 0 0 30px rgba(245, 158, 11, 0.2);
   animation: glowPulse 3s ease-in-out infinite;
 }
 
 @keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(99,102,241,0.3), 0 0 30px rgba(99,102,241,0.2); }
-  50% { box-shadow: 0 0 0 6px rgba(139,92,246,0.4), 0 0 60px rgba(139,92,246,0.3); }
+  0%, 100% { box-shadow: 0 0 0 3px rgba(245,158,11,0.3), 0 0 30px rgba(245,158,11,0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(249,115,22,0.4), 0 0 60px rgba(249,115,22,0.3); }
 }
 
 /* ======================================
@@ -188,7 +188,7 @@ body {
   inset: 0;
   border-radius: 1rem;
   padding: 1px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+  background: linear-gradient(135deg, #f59e0b, #f97316, #78716c);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -224,7 +224,7 @@ body {
    ====================================== */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(245,158,11,0.5), transparent);
   margin: 0 auto;
   max-width: 600px;
 }
@@ -247,7 +247,7 @@ body {
   display: inline-block;
   width: 3px;
   height: 1.2em;
-  background: #6366f1;
+  background: #f59e0b;
   margin-left: 4px;
   animation: blink 1s step-end infinite;
   vertical-align: text-bottom;
